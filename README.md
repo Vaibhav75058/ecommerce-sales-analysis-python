@@ -170,6 +170,50 @@ The project generates 13 charts covering:
 
 Charts are stored in the `outputs/charts/` directory.
 
+## 📊 Visualizations Gallery
+
+The following charts were generated using Python, Pandas, Matplotlib and Seaborn during Exploratory Data Analysis.
+
+### 1. Monthly Sales and Profit Analysis
+![Monthly Sales and Profit](outputs/charts/01_monthly_sales_profit.png)
+
+### 2. Category Performance
+![Category Performance](outputs/charts/02_category_performance.png)
+
+### 3. Top 5 Products
+![Top 5 Products](outputs/charts/03_top_5_products.png)
+
+### 4. Gender-wise Analysis
+![Gender Analysis](outputs/charts/04_gender_analysis.png)
+
+### 5. Age Group Analysis
+![Age Group Analysis](outputs/charts/05_age_group_analysis.png)
+
+### 6. State-wise Sales Analysis
+![State-wise Analysis](outputs/charts/06_state_wise_analysis.png)
+
+### 7. City-wise Sales Analysis
+![City-wise Analysis](outputs/charts/07_city_wise_analysis.png)
+
+### 8. Sales Channel Analysis
+![Sales Channel](outputs/charts/08_sales_channel_analysis.png)
+
+### 9. Order Status Analysis
+![Order Status](outputs/charts/09_order_status_analysis.png)
+
+### 10. Delivery Performance Analysis
+![Delivery Performance](outputs/charts/10_delivery_day_vs_rating_analysis.png)
+
+### 11. Sales Correlation Heatmap
+![Correlation Heatmap](outputs/charts/11_sales_correlation_heatmap.png)
+
+### 12. Category-wise Loss Analysis
+![Category Loss](outputs/charts/12_category_wise_loss.png)
+
+### 13. Product-wise Loss Analysis
+![Product Loss](outputs/charts/13_product-wise_Loss_Analysis.png)
+
+
 ## Installation and Setup
 
 ### 1. Clone the Repository
