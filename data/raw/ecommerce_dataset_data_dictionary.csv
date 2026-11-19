@@ -1,0 +1,25 @@
+Column,Business_Meaning,Expected_Data_Type,Data_Quality_Notes
+Order_ID,Unique order identifier,Text,Duplicate IDs intentionally exist
+Order_Date,Order date,Date/Text,Mixed formats and invalid dates intentionally exist
+Customer_ID,Synthetic customer identifier,Text,Repeated across orders
+Customer_Segment,"New, Returning or Loyalty",Category,Some missing values
+Gender,Synthetic customer demographic category,Category,Optional segmentation field
+Age,Customer age in years,Integer,Missing and implausible values
+City,Destination city,Category,Missing values; validate against State
+State,Destination state/UT,Category,Check city-state consistency
+Product_ID,Synthetic SKU,Text,Product catalog identifier
+Category,Product category,Category,Inconsistent labels
+Sub_Category,Product sub-category,Category,Product segmentation
+Product_Name,Product name,Text,Product-level analysis
+Quantity,Units ordered,Integer,"Text values, zero and negative quantities"
+Unit_Price,Unit price in INR,Decimal,Currency symbols/text formatting
+Discount_Pct,Discount percentage,Decimal,Missing and out-of-range values
+Shipping_Fee,Shipping charge in INR,Decimal,Zero is valid
+Sales_Amount,Recorded order sales in INR,Decimal,Formatting and arithmetic inconsistencies
+Cost_Amount,Estimated cost in INR,Decimal,Profitability analysis
+Profit,Recorded profit in INR,Decimal,Validate against Sales_Amount minus Cost_Amount
+Payment_Method,Payment method,Category,Missing/inconsistent labels
+Sales_Channel,"Website, app, marketplace or store",Category,Inconsistent labels/whitespace
+Order_Status,Order fulfillment status,Category,Inconsistent labels
+Delivery_Days,Delivery duration in days,Integer,Missing values are expected for some statuses
+Product_Rating,Rating from 1 to 5,Integer,Missing and invalid values
