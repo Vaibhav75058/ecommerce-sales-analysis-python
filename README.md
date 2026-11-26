@@ -1,14 +1,16 @@
-# E-Commerce Sales, Customer & Profitability Analysis using Python
+# E-Commerce Sales, Customer & Profitability Analysis
+
+An end-to-end data analytics portfolio project using **Python and Microsoft Power BI** to explore retail sales performance, customer behaviour, product profitability, and business trends.
 
 ## Project Overview
 
-This project focuses on analyzing e-commerce sales data to identify business performance trends, customer purchasing behaviour, product performance, geographical sales patterns, and profitability.
+This project analyzes synthetic e-commerce sales data to identify business performance trends, customer purchasing behaviour, product performance, geographical sales patterns, and profitability.
 
-The project uses Python for data cleaning, exploratory data analysis (EDA), statistical analysis, and business insights generation.
+The project combines Python-based data analysis and exploratory data analysis (EDA) with an interactive two-page Power BI dashboard.
 
-The objective is to transform raw sales data into meaningful information that can support data-driven business decisions.
+The objective is to transform raw sales data into meaningful business insights that support data-driven decision-making.
 
-**Note:** This project uses a synthetic dataset created for analytical and educational purposes. It does not represent actual company transactions.
+**Dataset Disclaimer:** This project uses a synthetic dataset created for analytical and educational purposes. It does not represent actual company transactions.
 
 ## Business Objectives
 
@@ -23,6 +25,7 @@ The objective is to transform raw sales data into meaningful information that ca
 - Analyze order status and delivery performance.
 - Understand the relationship between discounts and profitability.
 - Identify loss-making orders, categories, and products.
+- Build an interactive dashboard for business reporting.
 
 ## Tools & Technologies
 
@@ -34,13 +37,15 @@ The objective is to transform raw sales data into meaningful information that ca
 | Matplotlib | Data visualization |
 | Seaborn | Statistical visualization |
 | Jupyter Notebook | Exploratory analysis |
+| Power BI Desktop | Interactive dashboard development |
+| Power Query | Data transformation |
+| DAX | KPI calculations and measures |
 | VS Code | Development environment |
 | Git & GitHub | Version control and project hosting |
-| Power BI | Business dashboard development |
 
 ## Dataset Information
 
-The dataset contains 5,000 cleaned records and 28 columns.
+The cleaned dataset contains **5,000 records and 28 columns**.
 
 It includes information about:
 
@@ -58,12 +63,10 @@ It includes information about:
 ## Project Structure
 
 ```text
-Retail-Sales-Analysis/
+ecommerce-sales-analysis-python/
 │
 ├── data/
 │   ├── raw/
-│   │   └── retail_sales_raw.csv
-│   │
 │   └── processed/
 │       └── retail_sales_cleaned.csv
 │
@@ -80,12 +83,26 @@ Retail-Sales-Analysis/
 │   ├── charts/
 │   └── reports/
 │
+├── powerbi/
+│   ├── README.md
+│   └── Retail_Sales_Analysis_PowerBI.pbix
+│
+├── reports/
+│   ├── README.md
+│   ├── Retail_Sales_Analysis_Project_Report.pdf
+│   └── Retail_Sales_Analysis_PowerBI_pdf.pdf
+│
+├── screenshots/
+│   ├── README.md
+│   ├── dashboard_page_1.png
+│   └── dashboard_page_2.png
+│
 ├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
 
-## Data Cleaning
+## Data Cleaning & Preparation
 
 The raw dataset was inspected and cleaned before analysis.
 
@@ -102,9 +119,9 @@ Major cleaning activities included:
 
 The final processed dataset contains 5,000 rows and 28 columns.
 
-## Exploratory Data Analysis
+## Python Exploratory Data Analysis
 
-The project includes the following analytical areas:
+The Python analysis covers the following areas:
 
 1. Business Performance KPIs
 2. Monthly Sales Analysis
@@ -126,7 +143,73 @@ The project includes the following analytical areas:
 18. Correlation Analysis
 19. Loss Analysis
 
+## Power BI Interactive Dashboard
+
+The Power BI dashboard contains two interactive pages designed to provide business-level insights.
+
+### Page 1 — Sales Overview
+
+The Sales Overview page focuses on overall business performance.
+
+**Key Performance Indicators:**
+
+- Net Sales
+- Total Profit
+- Total Orders
+- Total Customers
+
+**Visualizations:**
+
+- Monthly Sales Trend
+- Sales by Category
+- Sales Contribution by Channel
+
+**Interactive Filters:**
+
+- Month
+- State
+- Category
+- Sales Channel
+
+### Page 2 — Customer & Product Insights
+
+This page focuses on customer behaviour and product performance.
+
+**Key Performance Indicators:**
+
+- Average Order Value
+- Profit Margin
+- Total Units Sold
+- Total Cost
+
+**Visualizations:**
+
+- Top 5 Products by Profit
+- Sales Contribution by State
+- Sales by Customer Segment
+- Orders by Age Group
+
+**Interactive Filters:**
+
+- Customer Segment
+- Gender
+- Payment Method
+
+Shared Month, State, and Category filters are synchronized across both dashboard pages.
+
+### Dashboard Preview
+
+#### 1. Sales Overview
+
+![Sales Overview Dashboard](screenshots/dashboard_page_1.png)
+
+#### 2. Customer & Product Insights
+
+![Customer and Product Insights Dashboard](screenshots/dashboard_page_2.png)
+
 ## Key Business Metrics
+
+### Python Analysis — Recorded Sales
 
 | Metric | Result |
 |---|---:|
@@ -139,23 +222,37 @@ The project includes the following analytical areas:
 | Average Order Value | ₹4,848.11 |
 | Profit Margin | 27.81% |
 
-*Recorded financial totals include all order statuses and should not be interpreted as realized revenue.*
+### Power BI Dashboard — Displayed KPIs
+
+| Metric | Dashboard Value |
+|---|---:|
+| Net Sales | ₹21.13M |
+| Total Profit | ₹6.74M |
+| Total Orders | 5,000 |
+| Total Customers | 1,675 |
+| Average Order Value | ₹4.85K |
+| Profit Margin | 27.81% |
+| Total Units Sold | 12K |
+| Total Cost | ₹17.50M |
+
+**Metric clarification:** Python Recorded Sales includes all order statuses. Power BI Net Sales excludes Cancelled and Returned orders. Therefore, these sales values are not directly comparable.
 
 ## Key Business Insights
 
 - Electronics generated the highest category-level sales and profit.
 - Home & Kitchen was the highest-performing subcategory by sales.
 - Repeat customers contributed approximately 93.99% of recorded sales.
-- The 26–35 age group generated the highest sales among age groups.
-- Madhya Pradesh recorded the highest state-level sales.
+- The 26–35 age group generated the highest sales among age groups in the Python analysis.
+- Madhya Pradesh recorded the highest state-level sales in the Python analysis.
 - Bhopal recorded the highest city-level sales.
 - Mobile App was the leading sales channel by recorded sales.
 - Higher discount bands were associated with lower profit margins.
 - The dataset contained 116 loss-making orders with a combined loss of ₹26,364.
+- In the Power BI dashboard, Air Fryer was the leading product in the Top 5 Products by Profit visual.
 
-## Visualizations
+## Python Visualizations Gallery
 
-The project generates 13 charts covering:
+The Python project generates 13 charts covering:
 
 - Monthly sales and profit trends
 - Category performance
@@ -170,57 +267,21 @@ The project generates 13 charts covering:
 
 Charts are stored in the `outputs/charts/` directory.
 
-## 📊 Visualizations Gallery
+## Project Documentation & Downloads
 
-The following charts were generated using Python, Pandas, Matplotlib and Seaborn during Exploratory Data Analysis.
+- [Detailed Project Report](reports/Retail_Sales_Analysis_Project_Report.pdf)
+- [Power BI Dashboard PDF](reports/Retail_Sales_Analysis_PowerBI_pdf.pdf)
+- [Power BI Dashboard File](powerbi/Retail_Sales_Analysis_PowerBI.pbix)
 
-### 1. Monthly Sales and Profit Analysis
-![Monthly Sales and Profit](outputs/charts/01_monthly_sales_profit.png)
+The `.pbix` file can be opened using Microsoft Power BI Desktop.
 
-### 2. Category Performance
-![Category Performance](outputs/charts/02_category_performance.png)
-
-### 3. Top 5 Products
-![Top 5 Products](outputs/charts/03_top_5_products.png)
-
-### 4. Gender-wise Analysis
-![Gender Analysis](outputs/charts/04_gender_analysis.png)
-
-### 5. Age Group Analysis
-![Age Group Analysis](outputs/charts/05_age_group_analysis.png)
-
-### 6. State-wise Sales Analysis
-![State-wise Analysis](outputs/charts/06_state_wise_analysis.png)
-
-### 7. City-wise Sales Analysis
-![City-wise Analysis](outputs/charts/07_city_wise_analysis.png)
-
-### 8. Sales Channel Analysis
-![Sales Channel](outputs/charts/08_sales_channel_analysis.png)
-
-### 9. Order Status Analysis
-![Order Status](outputs/charts/09_order_status_analysis.png)
-
-### 10. Delivery Performance Analysis
-![Delivery Performance](outputs/charts/10_delivery_day_vs_rating_analysis.png)
-
-### 11. Sales Correlation Heatmap
-![Correlation Heatmap](outputs/charts/11_sales_correlation_heatmap.png)
-
-### 12. Category-wise Loss Analysis
-![Category Loss](outputs/charts/12_category_wise_loss.png)
-
-### 13. Product-wise Loss Analysis
-![Product Loss](outputs/charts/13_product-wise_Loss_Analysis.png)
-
-
-## Installation and Setup
+## Installation & Setup — Python
 
 ### 1. Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd Retail-Sales-Analysis
+git clone https://github.com/Vaibhav75058/ecommerce-sales-analysis-python.git
+cd ecommerce-sales-analysis-python
 ```
 
 ### 2. Create a Virtual Environment
@@ -257,18 +318,20 @@ python src/eda.py
 
 ## Future Improvements
 
-- Develop an interactive Power BI dashboard.
 - Add advanced customer segmentation.
 - Perform sales forecasting.
-- Build an automated reporting system.
+- Build automated reporting workflows.
 - Explore customer retention and cohort analysis.
+- Develop additional profitability and operational KPIs.
 
 ## Author
 
-**Data Analytics Portfolio Project**
+**Vaibhav Jha**
 
-Skills demonstrated: Python, Pandas, NumPy, Data Cleaning, Exploratory Data Analysis, Business Analysis, Data Visualization, and SQL/Power BI project integration.
+Data Analytics Portfolio Project
+
+**Skills Demonstrated:** Python, Pandas, NumPy, Data Cleaning, Exploratory Data Analysis, SQL, Power BI, Power Query, DAX, Data Visualization, and Business Analysis.
 
 ---
 
-**Disclaimer:** This project is intended for educational and portfolio demonstration purposes. The dataset is synthetic and business insights are based only on the generated data.
+**Disclaimer:** This project is intended for educational and portfolio demonstration purposes. The dataset is synthetic, and all business insights are based on generated data.
